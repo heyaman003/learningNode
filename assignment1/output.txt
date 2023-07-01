@@ -1,0 +1,10 @@
+ Volume in drive D is New Volume
+ Volume Serial Number is 96A0-B01A
+
+ Directory of D:\nodejs\assignment1
+
+01-07-2023  12:57    <DIR>          .
+01-07-2023  12:57    <DIR>          ..
+01-07-2023  12:58               480 script.js
+               1 File(s)            480 bytes
+               2 Dir(s)  238,882,463,744 bytes free
