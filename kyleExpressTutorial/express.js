@@ -13,9 +13,9 @@ app.get('/',(req,res,next)=>{
        res.render('index',{text:'i love programming'})
 })
 const userRouter1=require('./routes/user')
-const userRouter2=require('./routes/user')
-//app.use('/users',userRouter1)
-app.use('/',userRouter2)
+//const userRouter2=require('./routes/user')
+app.use('/users',userRouter1)
+//app.use('/',userRouter2)
 app.listen(3000,()=>{
        console.log('server started')
 });
