@@ -14,6 +14,7 @@ router.post("/", (req, res) => {
 router
   .route("/:id")
   .get((req, res) => {
+      console.log(req.user)
     res.send(`user get with id ${req.params.id}`);
   })
   .put((req, res) => {
@@ -45,6 +46,25 @@ router
       router.patch('/:id',(req,res)=>{
       res.send(`user patch with id ${req.params.id}`)
       }) */
+
+
+      /* router.param('id',(req,res,next,id)=>{
+            console.log(id)
+            next()
+      }) */
+
+
+const users=[{name:"aman"}, {name:"jui"}]
+
+      router.param('id',(req,res,next,id)=>{
+            console.log(id)
+            req.user=users[id];
+            next()
+      })
+
+
+
+
 module.exports = router;
 
 /* router.get('/user',(req,res)=>{

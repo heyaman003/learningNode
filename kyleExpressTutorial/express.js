@@ -2,6 +2,7 @@ const express=require('express');
 const app=express();
 //No default engine was specified and no extension was provided.
 app.set('view engine','ejs')
+app.use(logging)
 app.get('/',(req,res,next)=>{
        console.log('here');
        //res.status(300).send('hii')
@@ -16,6 +17,10 @@ const userRouter1=require('./routes/user')
 //const userRouter2=require('./routes/user')
 app.use('/users',userRouter1)
 //app.use('/',userRouter2)
+function logging(req,res,next){
+       console.log(req.originalUrl)
+       next()
+}
 app.listen(3000,()=>{
        console.log('server started')
 });
